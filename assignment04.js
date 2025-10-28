@@ -15,7 +15,7 @@ function totalFine( fare ) {
 // Problem-02 : Clean & Capitalize Characters
 function  onlyCharacter( str ) {
     let ary = []
-    if(str === 'string'){
+    if(typeof str === 'string'){
     for(let st of str){
         // console.log(st)
         ary.push(st.toUpperCase())
@@ -27,6 +27,31 @@ function  onlyCharacter( str ) {
     }
     
 }
-let check = true
+// let check = true
 
-console.log(onlyCharacter(check))
+// console.log(onlyCharacter(check))
+
+// Problem-03 : FIFA Best Team Award 
+function  bestTeam( player1, player2 ) {
+    if(typeof player1 && typeof player2 === 'object'){
+        let one = player1.foul + player1.cardY + player1.cardR;
+          let two = player2.foul + player2.cardY + player2.cardR;
+          if(one < two){
+            return player1.name;
+          }
+          else if(two < one){
+            return player2.name;
+          }
+          else if(one === two){
+            return 'Tie'
+          }
+    }
+         else{
+            return 'Invalid'
+         } 
+}
+
+//  const playerone = { name: "Germany", foul: 10, cardY: 1, cardR: 1 }
+//  const playertwo = "France"
+
+// console.log(bestTeam(playerone, playertwo))
