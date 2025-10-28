@@ -59,19 +59,20 @@ function  bestTeam( player1, player2 ) {
 // Problem-04: Same Same But Different  
 function  isSame(arr1 , arr2 ) {
     if(arr1.length === arr2.length){
-        for(let arrone of arr1){
-            arr2.includes(arrone)
-            // console.log(arrone)
+        for(let i = 0; i<arr1.length; i++){
+            if(arr1[i]===arr2[i]){
+
+                return true
+            }
         }
-        return true
     }
     else{
         return false
     }
 }
-const one = [1, 2, 5]
+const one = [1, 4, 5]
 const two = [1, 2, 3]
-// console.log(isSame(one, two))
+console.log(isSame(one, two))
 
 // Problem-05: Exam Result Report Generator
 
@@ -98,5 +99,5 @@ function  resultReport( marks ) {
     }
 }
 
-const check = 100
-console.log(resultReport(check))
+// const check = 100
+// console.log(resultReport(check))
