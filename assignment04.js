@@ -71,4 +71,30 @@ function  isSame(arr1 , arr2 ) {
 }
 const one = [1, 2, 5]
 const two = [1, 2, 3]
-console.log(isSame(one, two))
+// console.log(isSame(one, two))
+
+// Problem-05: Exam Result Report Generator
+
+function  resultReport( marks ) {
+    if(typeof marks === 'object'){
+        
+    }
+    let sum = 0;
+    let pas = 0;
+    let fail = 0;
+    for(let mark of marks){
+        sum = mark + sum;
+        if(mark > 40){
+            pas++
+        }
+        else if(mark < 40){
+            fail++
+        }
+    }
+    console.log(fail)
+    let avg = Math.round(sum / marks.length);
+    return {finalScore: avg, pass: pas, fail: fail}
+}
+
+const check = [98, 87, 67, 91, 92, 33, 87]
+console.log(resultReport(check))
