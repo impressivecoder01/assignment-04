@@ -55,3 +55,20 @@ function  bestTeam( player1, player2 ) {
 //  const playertwo = "France"
 
 // console.log(bestTeam(playerone, playertwo))
+
+// Problem-04: Same Same But Different  
+function  isSame(arr1 , arr2 ) {
+    if(arr1.length === arr2.length){
+        for(let arrone of arr1){
+            arr2.includes(arrone)
+            // console.log(arrone)
+        }
+        return true
+    }
+    else{
+        return false
+    }
+}
+const one = [1, 2, 5]
+const two = [1, 2, 3]
+console.log(isSame(one, two))
