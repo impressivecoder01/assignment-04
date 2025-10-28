@@ -77,9 +77,7 @@ const two = [1, 2, 3]
 
 function  resultReport( marks ) {
     if(typeof marks === 'object'){
-        
-    }
-    let sum = 0;
+        let sum = 0;
     let pas = 0;
     let fail = 0;
     for(let mark of marks){
@@ -91,10 +89,14 @@ function  resultReport( marks ) {
             fail++
         }
     }
-    console.log(fail)
+    // console.log(fail)
     let avg = Math.round(sum / marks.length);
     return {finalScore: avg, pass: pas, fail: fail}
+    }
+    else{
+        return 'Invalid'
+    }
 }
 
-const check = [98, 87, 67, 91, 92, 33, 87]
+const check = 100
 console.log(resultReport(check))
