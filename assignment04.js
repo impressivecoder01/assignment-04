@@ -15,11 +15,18 @@ function totalFine( fare ) {
 // Problem-02 : Clean & Capitalize Characters
 function  onlyCharacter( str ) {
     let ary = []
+    if(str === 'string'){
     for(let st of str){
         // console.log(st)
         ary.push(st.toUpperCase())
     }
-    return ary.split(' ').join('')
+    return ary.join('').split(' ').join('')
+    }
+    else{
+        return 'Invalid'
+    }
+    
 }
-let check = 'ab ab a'
+let check = true
+
 console.log(onlyCharacter(check))
